@@ -77,6 +77,24 @@ class ParrotFactory {
 		return null;
 	}
 }
+
+class Fish extends Animal {
+	boolean sing() {
+		System.out.println("I cannot sing");
+		return false;
+	}
+
+	public void walk() {
+		System.out.println("I cannot walk");
+	}
+
+	boolean swim() {
+		System.out.println("I can swim");
+		return true;
+	}
+
+}
+
 //
 //class Rooster {
 //	Chicken chicken = new Chicken();
