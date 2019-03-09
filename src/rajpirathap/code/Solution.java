@@ -1,5 +1,6 @@
 package rajpirathap.code;
 
+
 class Animal {
 	public void walk() {
 		System.out.println("I am walking");
@@ -78,7 +79,19 @@ class ParrotFactory {
 	}
 }
 
+enum Size {
+	DEFAULT, LARGE, SMALL;
+}
+
+enum Color {
+	DEFAULT, GREY, ORANGE;
+}
+
 class Fish extends Animal {
+
+	Size s = Size.DEFAULT;
+	Color c = Color.DEFAULT;
+
 	boolean sing() {
 		System.out.println("I cannot sing");
 		return false;
@@ -93,6 +106,27 @@ class Fish extends Animal {
 		return true;
 	}
 
+	void setFishSize(Size size) {
+		this.s = size;
+	}
+
+	void setFishColor(Color color) {
+		this.c = color;
+	}
+}
+
+class Shark extends Fish {
+	boolean eat() {
+		System.out.println("I eat other fish");
+		return true;
+	}
+}
+
+class Clownfish extends Fish {
+	boolean make() {
+		System.out.println("I can make jokes");
+		return true;
+	}
 }
 
 //

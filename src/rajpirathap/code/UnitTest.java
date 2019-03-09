@@ -5,6 +5,7 @@ import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
+
 public class UnitTest {
 	@Test
 	public void testBird() {  // A.1
@@ -47,5 +48,18 @@ public class UnitTest {
 		Fish fish = new Fish();
 		assertEquals(false, fish.sing());
 		assertEquals(true, fish.swim());
+	}
+	
+	@Test
+	public void testSharkAndClownFish() {  // B.2
+		Shark shark = new Shark();
+		shark.setFishColor(Color.GREY);
+		shark.setFishSize(Size.LARGE);
+		assertEquals(true, shark.eat());
+
+		Clownfish clownfish = new Clownfish();
+		clownfish.setFishColor(Color.ORANGE);
+		clownfish.setFishSize(Size.SMALL);
+		assertEquals(true, clownfish.make());
 	}
 }
