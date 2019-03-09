@@ -5,7 +5,6 @@ import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-
 public class UnitTest {
 	@Test
 	public void testBird() {  // A.1
@@ -67,5 +66,12 @@ public class UnitTest {
 	public void testDolphin() {  // B.3
 		Dolhpin dolphin = new Dolhpin();
 		assertEquals(true, dolphin.swim());
+	}
+	
+	@Test
+	public void testButterFly(){  // D.1
+		Butterfly butterfly = new Butterfly();
+		assertEquals(true, butterfly.fly());
+		assertEquals(false, butterfly.sound());
 	}
 }

@@ -1,7 +1,6 @@
 package rajpirathap.code;
 
 
-
 class Animal {
 	public void walk() {
 		System.out.println("I am walking");
@@ -136,6 +135,35 @@ class Dolhpin extends Animal {
 
 	boolean swim() {
 		return fish.swim();
+	}
+
+}
+
+interface Insect {
+	boolean fly();
+
+	void walk();
+
+	boolean sound();
+}
+
+class Butterfly extends Animal implements Insect {
+
+	@Override
+	public boolean fly() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public void walk() {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public boolean sound() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
