@@ -1,6 +1,7 @@
 package rajpirathap.code;
 
 
+
 class Animal {
 	public void walk() {
 		System.out.println("I am walking");
@@ -129,6 +130,15 @@ class Clownfish extends Fish {
 	}
 }
 
+
+class Dolhpin extends Animal {
+	Fish fish = new Fish();
+
+	boolean swim() {
+		return fish.swim();
+	}
+
+}
 //
 //class Rooster {
 //	Chicken chicken = new Chicken();

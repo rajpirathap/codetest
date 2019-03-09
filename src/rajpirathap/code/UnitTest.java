@@ -62,4 +62,10 @@ public class UnitTest {
 		clownfish.setFishSize(Size.SMALL);
 		assertEquals(true, clownfish.make());
 	}
+	
+	@Test
+	public void testDolphin() {  // B.3
+		Dolhpin dolphin = new Dolhpin();
+		assertEquals(true, dolphin.swim());
+	}
 }
