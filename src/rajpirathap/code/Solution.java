@@ -1,6 +1,5 @@
 package rajpirathap.code;
 
-
 class Animal {
 	public void walk() {
 		System.out.println("I am walking");
@@ -164,6 +163,28 @@ class Butterfly extends Animal implements Insect {
 	public boolean sound() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+}
+
+
+class Caterpillar implements Insect {
+
+	@Override
+	public boolean fly() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void walk() {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public boolean sound() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 
 }
