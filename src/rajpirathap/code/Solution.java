@@ -38,17 +38,53 @@ class Chicken extends Bird {
 	}
 }
 
-//class Rooster extends Chicken {
-//
-//}
+class Rooster extends Chicken {
 
-class Rooster {
-	Chicken chicken = new Chicken();
+}
 
-	void say(String sound) {
-		chicken.say(sound);
+interface IParrot {
+
+}
+
+class Parrot extends Bird implements IParrot {
+
+}
+
+class ParrotWithDog extends Parrot {
+
+}
+
+class ParrotWithCat extends Parrot {
+
+}
+
+class ParrotWithRooster extends Parrot {
+
+}
+
+class ParrotFactory {
+	public IParrot getParrot(String sound) {
+		if (sound.equalsIgnoreCase("Woof, woof")) {
+			return new ParrotWithDog();
+
+		} else if (sound.equalsIgnoreCase("Meow")) {
+			return new ParrotWithCat();
+
+		} else if (sound.equalsIgnoreCase("Cock-a-doodle-doo")) {
+			return new ParrotWithRooster();
+		}
+
+		return null;
 	}
 }
+//
+//class Rooster {
+//	Chicken chicken = new Chicken();
+//
+//	String say(String sound) {
+//		return chicken.say(sound);
+//	}
+//}
 
 public class Solution {
 

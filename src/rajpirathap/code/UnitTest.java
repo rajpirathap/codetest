@@ -1,7 +1,10 @@
 package rajpirathap.code;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+
 
 public class UnitTest {
 	@Test
@@ -26,5 +29,17 @@ public class UnitTest {
 	public void testRooster() {  // A.3
 		Rooster rooster = new Rooster();
 		assertEquals("Cock-a-doodle-doo", rooster.say("Cock-a-doodle-doo"));
+	}
+	
+	@Test
+	public void testParrort() { // A.4
+		ParrotFactory parrotFac = new ParrotFactory();
+		Parrot parrotWithDog = (Parrot) parrotFac.getParrot("Woof, woof");
+		Parrot parrotWithCat = (Parrot) parrotFac.getParrot("Meow");
+		Parrot parrotWithRooster = (Parrot) parrotFac.getParrot("Cock-a-doodle-doo");
+
+		assertThat(parrotWithDog, instanceOf(Parrot.class));
+		assertThat(parrotWithCat, instanceOf(Parrot.class));
+		assertThat(parrotWithRooster, instanceOf(Parrot.class));
 	}
 }
