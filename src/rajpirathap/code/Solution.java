@@ -1,5 +1,6 @@
 package rajpirathap.code;
 
+
 class Animal {
 	public void walk() {
 		System.out.println("I am walking");
@@ -186,6 +187,14 @@ class Caterpillar implements Insect {
 		// TODO Auto-generated method stub
 		return true;
 	}
+
+}
+
+class Dog extends Animal {
+
+}
+
+class Cat extends Animal {
 
 }
 //

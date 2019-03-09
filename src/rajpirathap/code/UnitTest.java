@@ -3,8 +3,8 @@ package rajpirathap.code;
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.lang.reflect.Method;
 import org.junit.jupiter.api.Test;
-
 
 public class UnitTest {
 	@Test
@@ -81,4 +81,43 @@ public class UnitTest {
 		Caterpillar caterpiller = new Caterpillar();
 		assertEquals(false, caterpiller.fly());
 	}
+	
+	@Test
+	public void testAnimalCount(){  // E.1
+		Animal[] animals = new Animal[] { new Bird(), new Duck(), new Chicken(), new Rooster(), new Parrot(),
+				new Fish(), new Shark(), new Clownfish(), new Dolhpin(), new Dog(), new Butterfly(), new Cat() };
+
+		int flyCount = 0;
+		int walkCount = 0;
+		int singCount = 0;
+		int swimCount = 0;
+		for (int i = 0; i < animals.length; i++) {
+			Animal animal = animals[i];
+			Method[] methods = animal.getClass().getDeclaredMethods();
+			// System.out.println(animal.getClass().toString());
+			for (int z = 0; z < methods.length; z++) {
+				String methodName = methods[z].toString();
+				// System.out.println(" " + methodName);
+				if (methodName.contains("fly")) {
+					flyCount++;
+				}
+				if (methodName.contains("walk")) {
+					walkCount++;
+				}
+				if (methodName.contains("sing")) {
+					singCount++;
+				}
+				if (methodName.contains("swim")) {
+					swimCount++;
+				}
+			}
+
+		}
+
+		assertEquals(5, flyCount);
+		assertEquals(2, walkCount);
+		assertEquals(2, singCount);
+		assertEquals(3, swimCount);
+	}
+	
 }
