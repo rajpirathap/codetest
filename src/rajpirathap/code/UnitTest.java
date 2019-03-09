@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.lang.reflect.Method;
 import org.junit.jupiter.api.Test;
 
+
 public class UnitTest {
 	@Test
 	public void testBird() {  // A.1
@@ -118,6 +119,12 @@ public class UnitTest {
 		assertEquals(2, walkCount);
 		assertEquals(2, singCount);
 		assertEquals(3, swimCount);
+	}
+	
+	@Test
+	public void testlanguage(){  // Bonus
+		Solution solution = new Solution();
+		assertEquals("kykyliky", solution.makeRoosterSound(Language.DANISH));
 	}
 	
 }

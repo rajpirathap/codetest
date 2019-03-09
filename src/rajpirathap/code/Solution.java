@@ -197,6 +197,10 @@ class Dog extends Animal {
 class Cat extends Animal {
 
 }
+
+enum Language {
+	DANISH, DUTCH, FRENCH, GERMAN;
+}
 //
 //class Rooster {
 //	Chicken chicken = new Chicken();
@@ -208,4 +212,25 @@ class Cat extends Animal {
 
 public class Solution {
 
+	public static String makeRoosterSound(Language language) {
+		String sound = "";
+		switch (language) {
+		case FRENCH:
+			sound = "cocorico";
+			break;
+		case DUTCH:
+			sound = "kukeleku";
+			break;
+		case DANISH:
+			sound = "kykyliky";
+			break;
+		case GERMAN:
+			sound = "kikeriki";
+			break;
+		default:
+			break;
+		}
+
+		return sound;
+	}
 }
