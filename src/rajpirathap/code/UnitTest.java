@@ -21,4 +21,10 @@ public class UnitTest {
 		assertEquals("Cluck, cluck", chicken.say("Cluck, cluck"));
 		assertEquals(false, chicken.fly());
 	}
+	
+	@Test
+	public void testRooster() {  // A.3
+		Rooster rooster = new Rooster();
+		assertEquals("Cock-a-doodle-doo", rooster.say("Cock-a-doodle-doo"));
+	}
 }

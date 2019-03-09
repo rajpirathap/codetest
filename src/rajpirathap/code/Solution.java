@@ -38,6 +38,9 @@ class Chicken extends Bird {
 	}
 }
 
+class Rooster extends Chicken {
+
+}
 
 public class Solution {
 	
