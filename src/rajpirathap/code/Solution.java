@@ -38,10 +38,18 @@ class Chicken extends Bird {
 	}
 }
 
-class Rooster extends Chicken {
+//class Rooster extends Chicken {
+//
+//}
 
+class Rooster {
+	Chicken chicken = new Chicken();
+
+	void say(String sound) {
+		chicken.say(sound);
+	}
 }
 
 public class Solution {
-	
+
 }
