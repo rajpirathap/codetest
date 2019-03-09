@@ -1,0 +1,21 @@
+A
+	1.a - Junit is used for unit testing
+	3.b - Rooster is one of the subclass of chicken class
+	3.c - Instead of inheritance we can use delegation concept
+	4.d - Using the factory pattern we can archive it.
+
+
+BONUS
+2. Can you design a RESTful API for querying these animals?
+	option 1
+	--------
+	We can use spring framework and it's MVC pattern to design and expose a REST API client
+	in java. We can define the model classes such as Animal, Bird and other relevant classes
+	. Then the service classes exposed to write the business logic behind the scene. 
+	Also the controller classes will be defined with the API end points to be called with 
+	REST clients. The API response can be exposed in a JSON format which is a universal accepted
+	format for REST clients. 
+	
+	The query parameters can be passed as url parameters or pass through http request body.
+	later in controller we can receive those parameters and do further processes. 
+	
